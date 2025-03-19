@@ -87,6 +87,22 @@ chat-api/
    mvn spring-boot:run
    ```
 5. Acesse `http://localhost:8080` para ver a interface de teste
+## Frontend
+
+Navegue até a pasta do frontend e execute os seguintes passos:
+
+1. Navegue até a pasta do frontend:
+   ```bash
+   cd (pasta do projeto)
+2. Instale as dependências:
+    ```bash
+   npm install
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   
+4. Acesse http://localhost:5173 para ver o frontend em execução.
+   
 
 ## Exemplo de Uso (JavaScript)
 
@@ -141,23 +157,6 @@ A aplicação possui logs detalhados configurados para o nível DEBUG:
 ```properties
 logging.level.org.springframework.web=DEBUG
 ```
-
-## Limitações
-
-- Não possui persistência de mensagens
-- Autenticação não implementada
-- Sem suporte a salas de chat separadas
-- Sem suporte a mensagens privadas
-
-## Próximas Melhorias
-
-- [ ] Implementar autenticação de usuários
-- [ ] Adicionar persistência de mensagens
-- [ ] Criar suporte a salas de chat
-- [ ] Implementar mensagens privadas
-- [ ] Adicionar suporte a emojis
-- [ ] Implementar rate limiting
-- [ ] Adicionar suporte a upload de arquivos
 
 ## Contribuição
 
