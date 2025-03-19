@@ -1,7 +1,6 @@
 package com.exemplo.chat.model;
 
 import com.exemplo.chat.enums.MessageType;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -25,7 +24,6 @@ public class Message {
     private String content;
 
     @Column(nullable = false)
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")  // Formato ISO 8601 para serializar o LocalDateTime
     private LocalDateTime timestamp;
 
     @Enumerated(EnumType.STRING)

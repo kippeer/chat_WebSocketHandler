@@ -7,19 +7,16 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
-
 @Configuration
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
     @Autowired
-    @Lazy
-    private ChatWebSocketHandler chatHandler;
+    private ChatWebSocketHandler chatWebSocketHandler;
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(chatHandler, "/chat")
-                .setAllowedOrigins("*"); // Permite todas as origens (CORS)
+        registry.addHandler(chatWebSocketHandler, "/chat").setAllowedOrigins("*");
         System.out.println("WebSocket configurado para /chat");
     }
 }
